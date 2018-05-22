@@ -12,7 +12,6 @@ import withHelper from './withHelper';
 export default withHelper(
 theme => ({
   bar: {
-    position: 'fixed',
     zIndex: theme.zIndex.drawer + 1,
   },
   flex: {

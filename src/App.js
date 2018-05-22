@@ -9,20 +9,31 @@ import ContentPlaceholder from './ContentPlaceholder'
 
 export default withRoot(withHelper(
 theme => ({
+  root:{
+    display: 'flex',
+    'flex-direction': 'column',
+    height: '100vh',
+  },
+  horizontalContent: {
+    display: 'flex',
+    flex: 1,
+  },
   content: {
-    'padding-top': 64,
-    'padding-left': 240,
+    flex: 1,
+    overflow: 'auto',
   }
 }),
 ({ classes }) => (
-  <React.Fragment>
+  <div className={classes.root}>
     <Header pageName="CITS5501" userName="Name Here"/>
-    <Sidebar />
-    <div className={classes.content}>
-      <ContentPlaceholder/>
+    <div className={classes.horizontalContent}>
+      <Sidebar />
+      <div className={classes.content}>
+        <ContentPlaceholder/>
+      </div>
     </div>
     {/*<Footer />*/}
-  </React.Fragment>
+  </div>
 ),
 {
   classes: PropTypes.object.isRequired,

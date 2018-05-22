@@ -19,8 +19,10 @@ import withHelper from './withHelper';
 export default withHelper(
 theme => ({
   root: {
-    top: 64,
+    position: 'static',
     width: 240,
+    'overflow-wrap': 'break-word',
+    height: '100%',
   },
 }),
 ({ classes }) => (
@@ -31,7 +33,7 @@ theme => ({
     classes={{paper: classes.root}}
   >
     <List>
-      <ListItem button>
+      <ListItem>
         <ListItemIcon>
           <ClassIcon />
         </ListItemIcon>
@@ -52,7 +54,7 @@ theme => ({
     </List>
     <Divider />
     <List>
-      <ListItem button>
+      <ListItem>
         <ListItemIcon>
           <AssignmentIcon />
         </ListItemIcon>
