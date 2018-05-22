@@ -1,21 +1,30 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import PropTypes from 'prop-types';
+import withRoot from './withRoot';
+import withHelper from './withHelper';
+import Header from './Header';
+import Sidebar from './Sidebar';
+//import Footer from './Footer';
+import ContentPlaceholder from './ContentPlaceholder'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+export default withRoot(withHelper(
+theme => ({
+  content: {
+    'padding-top': 64,
+    'padding-left': 240,
   }
+}),
+({ classes }) => (
+  <React.Fragment>
+    <Header pageName="CITS5501" userName="Name Here"/>
+    <Sidebar />
+    <div className={classes.content}>
+      <ContentPlaceholder/>
+    </div>
+    {/*<Footer />*/}
+  </React.Fragment>
+),
+{
+  classes: PropTypes.object.isRequired,
 }
-
-export default App;
+));
