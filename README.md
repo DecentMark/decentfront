@@ -1,5 +1,11 @@
-# decentmockup
-Mockup for the front-end of decentmark
+# decentfront
+DecentMark front-end.
+
+## Running
+- Install nodejs and npm
+- Install yarn `npm install yarn`
+- Install dependencies `yarn install`
+- Start with `yarn run start`
 
 ## References
 - [Create React App](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md)
