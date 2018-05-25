@@ -7,10 +7,8 @@ import Typography from '@material-ui/core/Typography';
 export default withHelper(
 theme => ({
   root: {
-    position: 'fixed',
+    position: 'static',
     zIndex: theme.zIndex.drawer + 1,
-    width: '100%',
-    bottom: 0,
   }
 }),
 ({ classes }) => (
@@ -19,7 +17,7 @@ theme => ({
     className={classes.root}
   >
     <Typography variant="title" color="inherit">
-      7:30 AM
+      Footer if needed.
     </Typography>
   </BottomNavigation>
 ),

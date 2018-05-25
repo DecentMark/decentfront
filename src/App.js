@@ -4,8 +4,8 @@ import withRoot from './withRoot';
 import withHelper from './withHelper';
 import Header from './Header';
 import Sidebar from './Sidebar';
-//import Footer from './Footer';
-import ContentPlaceholder from './ContentPlaceholder'
+// import Footer from './Footer';
+import Home from './Home'
 
 export default withRoot(withHelper(
 theme => ({
@@ -21,6 +21,7 @@ theme => ({
   content: {
     flex: 1,
     overflow: 'auto',
+    padding: theme.spacing.unit * 3,
   }
 }),
 ({ classes }) => (
@@ -29,10 +30,9 @@ theme => ({
     <div className={classes.horizontalContent}>
       <Sidebar />
       <div className={classes.content}>
-        <ContentPlaceholder/>
+        <Home/>
       </div>
     </div>
-    {/*<Footer />*/}
   </div>
 ),
 {
